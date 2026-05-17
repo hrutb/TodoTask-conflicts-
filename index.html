@@ -15,8 +15,43 @@
  <link rel="stylesheet" href="./assets/css/style.css">
    
 </head>
-    <body>
-        
+    <body> 
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="" id="todoForm">
+                                <div class="form-group">
+                                  <label for="todoForm" id="todoForm" class="sr-only">Todo Item</label>
+                                 <input type="text" class="form-control" id="todoItem"/>
+                                </div>
+
+                                <button class="btn btn-block btn-outline-primary"> Add Student</button>
+                                <button class="btn btn-block btn-outline-primary d-none">Update Student</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="list-group" id="todoContainer">
+                                <!-- <li class="list-group-item d-flex justify-content-between">
+                                    <strong>JS</strong>
+                                    <div>
+                                        <i class="fa-solid fa-pen-to-square text-primary"></i>
+                                        <i class="fa-solid fa-trash text-primary"></i>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
 
 
         <script src="./assets/js/app.js"></script>
