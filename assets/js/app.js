@@ -50,6 +50,32 @@ function onRemove(ele) {
   });
 }
 
+
+function onUpdateTodo(){
+
+  let updateObj = todoArr.find(todo => {
+    return todo.todoId === EDIT_ID;
+  });
+
+  updateObj.todoItem = todoItemControl.value.trim();
+
+  template(todoArr);
+
+  todoForm.reset();
+
+  addTodoBtn.classList.remove('d-none');
+  updateTodoBtn.classList.add('d-none');
+
+  EDIT_ID = null;
+
+  Swal.fire({
+    title : 'Todo updated successfully!!!',
+    icon : 'success',
+    timer : 3000
+  });
+}
+
+
 function template(arr){
   let res = ' '; 
 
@@ -69,3 +95,4 @@ function template(arr){
 template(todoArr)
 
 
+updateTodoBtn.addEventListener('click', onUpdateTodo);
