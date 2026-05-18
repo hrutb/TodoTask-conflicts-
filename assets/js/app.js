@@ -19,7 +19,7 @@ const todoContainer =document.getElementById('todoContainer');
 
 
 function template(arr){
-  let res = ' '; 
+  let res =''; 
 
   arr.forEach(ele=>{  
     res +=`<li id="${ele.todoId}" class="list-group-item d-flex justify-content-between">
