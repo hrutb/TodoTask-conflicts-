@@ -48,11 +48,13 @@ function onTodoSubmit(eve) {
   todoArr.push(newTodo);
 
   let li = document.createElement('li');
+  
   li.className = 'list-group-item d-flex justify-content-between';
+  
   li.id = newTodo.todoId;
 
   li.innerHTML = `
-        <strong>${newTodo.todoItem}</strong>
+            <strong>${newTodo.todoItem}</strong>
           <div>
               <i class="fa-solid fa-pen-to-square  text-primary"  ></i>
               <i class="fa-solid fa-trash-can   text-danger"  ></i>
@@ -67,5 +69,6 @@ function onTodoSubmit(eve) {
         icon : 'success'
    })
 }
+
 
 todoForm.addEventListener('submit',onTodoSubmit)
