@@ -22,7 +22,20 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            
+                            <form id="todoForm">
+                                <div class="form-group">
+                                    <label for="todoItem"> TODO ITEMs</label>
+                                    <input type="text" class="form-control" id="todoItem">
+                                </div>
+
+                                <button type="submit" id="addTodoBtn" class="btn btn-primary btn-block btn-sm">
+                                    ADD TODO
+                                </button>
+
+                                <button type="button" id="updateTodoBtn" class="d-none btn btn-primary btn-block btn-sm">
+                                    UPDATE TODO
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -45,7 +58,7 @@
         </div>
           
 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
         <script src="./assets/js/app.js"></script>
     </body>
 </html>

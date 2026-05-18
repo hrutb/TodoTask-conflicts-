@@ -14,7 +14,8 @@ let todoArr = [
 
 ]; 
 
-
+const todoForm = document.getElementById('todoForm')
+const todoItemContainer = document.getElementById('todoItem')
 const todoContainer =document.getElementById('todoContainer');
 
 function onRemove(ele) {
@@ -51,7 +52,7 @@ function onRemove(ele) {
 }
 
 function template(arr){
-  let res =''; 
+  let res = ' ' ;
 
   arr.forEach(ele=>{  
     res +=`<li id="${ele.todoId}" class="list-group-item d-flex justify-content-between">
@@ -67,5 +68,3 @@ function template(arr){
 }
 
 template(todoArr)
-
-
