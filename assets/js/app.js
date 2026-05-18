@@ -38,8 +38,6 @@ function template(arr){
 template(todoArr)
 
 function onTodoSubmit(eve) {
-
-
   eve.preventDefault()
   // cl('Submitted...')
   let newTodo ={
@@ -67,9 +65,7 @@ function onTodoSubmit(eve) {
         title : `The new Todo item ${newTodo.todoItem} item added successfull...!`,
         timer : 3000,
         icon : 'success'
-
    })
 }
-
 
 todoForm.addEventListener('submit',onTodoSubmit)
