@@ -26,8 +26,9 @@ function template(arr){
     res +=`<li id="${ele.todoId}" class="list-group-item d-flex justify-content-between">
                                     <strong>${ele.todoItem}</strong>
                                     <div>
-                                        <i class="fa-solid fa-pen-to-square text-primary"></i>
-                                        <i class="fa-solid fa-trash text-danger"></i>
+                                        <i class="fa-solid fa-pen-to-square text-primary" onclick
+                                        "submit"></i>
+                                        <i class="fa-solid fa-trash text-danger" onclick="remove"></i>
                                     </div>
                                 </li>`
   }) ;
