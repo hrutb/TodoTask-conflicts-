@@ -35,6 +35,8 @@ function onRemove(ele) {
     cancelButtonText: "Cancel"
   }).then((result) => {
 
+
+
     if(result.isConfirmed){
 
       let removeTodo = todoArr.splice(getIndex, 1);
