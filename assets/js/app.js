@@ -46,6 +46,25 @@ function template(arr){
 
 
 
+function template(arr){
+  let res = ' '; 
+
+  arr.forEach(ele=>{  
+    res +=`<li id="${ele.todoId}" class="list-group-item d-flex justify-content-between">
+                                    <strong>${ele.todoItem}</strong>
+                                    <div>
+                                        <i class="fa-solid fa-pen-to-square text-primary" onclick="onEdit(this)"></i>
+                                        <i class="fa-solid fa-trash text-danger" onclick="onRemove(this)"></i>
+                                    </div>
+                                </li>`
+  }) ;
+
+  todoContainer.innerHTML= res;
+}
+
+template(todoArr)
+
+
 
 template(todoArr)
 
@@ -136,27 +155,58 @@ function onEdit(ele){
 
   addTodoBtn.classList.add('d-none');
   updateTodoBtn.classList.remove('d-none');
+
+
 }
 
 
-function template(arr){
-  let res = ' '; 
 
-  arr.forEach(ele=>{  
-    res +=`<li id="${ele.todoId}" class="list-group-item d-flex justify-content-between">
-                                    <strong>${ele.todoItem}</strong>
-                                    <div>
-                                        <i class="fa-solid fa-pen-to-square text-primary" onclick="onEdit(this)"></i>
-                                        <i class="fa-solid fa-trash text-danger" onclick="onRemove(this)"></i>
-                                    </div>
-                                </li>`
-  }) ;
 
-  todoContainer.innerHTML= res;
+
+
+
+
+
+
+
+function onUpdateTodo(){
+
+  let updateObj = todoArr.find(todo => {
+    return todo.todoId === EDIT_ID;
+  });
+
+  updateObj.todoItem = todoItemControl.value.trim();
+
+  template(todoArr);
+
+  todoForm.reset();
+
+  addTodoBtn.classList.remove('d-none');
+  updateTodoBtn.classList.add('d-none');
+
+  EDIT_ID = null;
+
+  Swal.fire({
+    title : 'Todo updated successfully!!!',
+    icon : 'success',
+    timer : 3000
+  }); 
+
 }
 
-template(todoArr)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 todoForm.addEventListener('submit',onTodoSubmit)
+updateTodoBtn.addEventListener('click', onUpdateTodo);
