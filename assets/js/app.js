@@ -21,12 +21,15 @@ function onRemove(ele) {
 
   let REMOVE_ID = ele.closest('li').id;
 
+
+
   let getIndex = todoArr.findIndex(todo => {
     return todo.todoId === REMOVE_ID;
   });
 
   let removedTodo = todoArr[getIndex];
-
+ 
+  //Swal Alert
   Swal.fire({
     title: `Are you sure? You want to delete ${removedTodo.todoItem}!`,
     icon: "question",
