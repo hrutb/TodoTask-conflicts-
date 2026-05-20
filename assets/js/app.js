@@ -169,30 +169,6 @@ function onEdit(ele){
 
 
 
-function onUpdateTodo(){
-
-  let updateObj = todoArr.find(todo => {
-    return todo.todoId === EDIT_ID;
-  });
-
-  updateObj.todoItem = todoItemControl.value.trim();
-
-  template(todoArr);
-
-  todoForm.reset();
-
-  addTodoBtn.classList.remove('d-none');
-  updateTodoBtn.classList.add('d-none');
-
-  EDIT_ID = null;
-
-  Swal.fire({
-    title : 'Todo updated successfully!!!',
-    icon : 'success',
-    timer : 3000
-  }); 
-
-}
 
 
 
@@ -209,4 +185,3 @@ function onUpdateTodo(){
 
 
 todoForm.addEventListener('submit',onTodoSubmit)
-updateTodoBtn.addEventListener('click', onUpdateTodo);
