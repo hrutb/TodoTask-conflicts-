@@ -53,7 +53,7 @@ function onTodoSubmit(eve) {
   eve.preventDefault()
   // cl('Submitted...')
   let newTodo ={
-    todoItem : todoItemContainer.value ,
+    todoItem : todoItemControl.value ,
     todoId :  Date.now().toString()
   }
   // 4cl(newTodo)T
