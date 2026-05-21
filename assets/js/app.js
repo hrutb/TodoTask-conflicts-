@@ -39,9 +39,3 @@ function template(arr){
 }
 
 template(todoArr);
-
-
-
-
-
-
