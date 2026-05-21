@@ -16,12 +16,6 @@ let todoArr = [
 
 // EDIT
 const todoContainer =document.getElementById('todoContainer');
-const todoForm = document.getElementById('todoForm');
-const todoItemControl = document.getElementById('todoItem');
-const addTodoBtn = document.getElementById('addTodoBtn');
-const updateTodoBtn = document.getElementById('updateTodoBtn');
-
-let EDIT_ID = null;
 
 
 function template(arr){
@@ -44,4 +38,4 @@ function template(arr){
   todoContainer.innerHTML= res;
 }
 
-
+template(localArr);
