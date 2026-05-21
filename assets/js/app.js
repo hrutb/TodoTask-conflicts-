@@ -16,6 +16,9 @@ let todoArr = [
 
 
 const todoContainer =document.getElementById('todoContainer');
+const updateTodoBtn = document.getElementById('updateTodo')
+
+
 
 
 function template(arr){
