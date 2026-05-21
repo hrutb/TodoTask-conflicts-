@@ -14,7 +14,7 @@ let todoArr = [
 
 ]; 
 
-// EDIT
+
 const todoContainer =document.getElementById('todoContainer');
 
 
@@ -38,4 +38,4 @@ function template(arr){
   todoContainer.innerHTML= res;
 }
 
-template(localArr);
+template(todoArr);
